@@ -1,0 +1,85 @@
+/* ================================
+   DECLARACIÓN DE USO DE IA
+   ================================
+   Este archivo CSS fue generado con asistencia de inteligencia artificial
+   y posteriormente adaptado al proyecto. Se utilizó como base el HTML
+   previamente construido para la serie Westworld.
+
+   Conclusiones del análisis:
+   - La versión IA prioriza contraste, jerarquía visual y legibilidad.
+   - Se reorganizaron los espacios para mejorar la lectura en bloques largos.
+   - Se introdujo una estética más oscura y cinematográfica para alinearse
+     con la temática de la serie.
+   - Comparado con el CSS original, este diseño es más expresivo y menos plano,
+     aunque requiere mayor cuidado en consistencia de márgenes y tamaños.
+================================ */
+
+/* Fondo general más oscuro y cinematográfico */
+body {
+  background-color: #0b0f1a;
+  background-image: linear-gradient(to bottom, #0b0f1a, #111a2e);
+  font-family: "Arial", Helvetica, sans-serif;
+  color: #e6e6e6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Imágenes más integradas al diseño */
+img {
+  width: 80%;
+  max-width: 900px;
+  display: block;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* Menú más moderno tipo “barra” */
+#menu {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#menu li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+#menu a {
+  color: #7fd3ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#menu a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Título principal con impacto visual */
+#titulo {
+  text-align: center;
+  font-size: 38px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Caja de texto estilo lectura tipo artículo */
+.caja {
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.05);
+  border-left: 4px solid #7fd3ff;
+}
+
+/* Centrado reutilizable */
+.centrado {
+  text-align: center;
+}
