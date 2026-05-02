@@ -1,0 +1,144 @@
+body {background-image: url("../img/fondo.jpg");background-size: cover;}
+body {font-family: Impact, Haettenschweiler; color: rgb(2, 26, 24);}
+img {width: 1000px;display: block;margin: 0 auto;}
+ul {margin-bottom: 60px;}
+#titulo {text-align: center;font-size: 32px;}
+.menu {text-align: left; color: rgb(14, 186, 225) ;}
+.caja {line-height: 2;}
+.centrado {text-align: center;}
+.titulos {
+  text-align: center;
+}
+h1 {
+  Impact, Haettenschweiler;font-size: 60px; color: rgb(73, 5, 5);
+}
+h2 {
+  Impact, Haettenschweiler;font-size: 17px; color: rgb(58, 2, 2);
+}
+h1 {
+  margin-bottom: 0px;
+}
+
+h2 {
+  margin-top: 0;
+}
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+.menu a {
+  text-decoration: none;
+  background-color: #0e4b0b;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: 0.2s;
+}
+.menu1 {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+.menu1 a {
+  text-decoration: none;
+  background-color: #570d1e;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.menu2 {
+  display: flex;
+  gap: 80px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+.menu2 a {
+  text-decoration: none;
+  background-color: #7c142c;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: 0.2s;
+}
+.bio {
+  text-align: center;
+}
+
+.bio img {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+
+.rodaje img {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+.rodaje {
+  text-align: center;
+}
+.cuerpo img {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+.cuerpo {
+  text-align: center;
+}
+.territorio img {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+.territorio {
+  text-align: center;}
+
+  .sintesis img {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+.sintesis {
+  text-align: center;}
+
+  .narrativa img {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+.narrativa {
+  text-align: center;}
+
+  .footer {
+  text-align: center;          /* centra el texto */
+  font-family: Arial, sans-serif; /* cambia la fuente */
+  font-size: 20px;             /* tamaño del texto */
+  color: #0f150f;                 /* color suave */
+  padding: 20px;               /* espacio interno */
+  margin-top: 40px;            /* separa del contenido */
+  border-top: 2px solid #1c2621;  /* línea arriba (detalle estético) */
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.video video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+}
