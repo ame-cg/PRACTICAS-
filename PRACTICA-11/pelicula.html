@@ -1,0 +1,273 @@
+pelicula
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>District 9 – Biblia Visual</title>
+
+<style>
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #1F1F1F;
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+/* CONTENEDOR GENERAL */
+.container {
+  width: 95%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+/* TITULO */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #D4C27C;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+/* GRID PRINCIPAL */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* BLOQUES */
+.card {
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  background: #333;
+}
+
+/* TITULOS DE SECCION */
+.card h2 {
+  color: #D4C27C;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* PALETA */
+.palette {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+/* TEXTURAS */
+.texture {
+  width: 100%;
+  height: 120px;
+  background-size: cover;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* MODAL (INTERACTIVO) */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  width: 80%;
+  max-width: 800px;
+  background: #1F1F1F;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #D4C27C;
+}
+
+/* BOTONES */
+.btn {
+  background: #4F5D3A;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+  .title {
+    font-size: 2rem;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="title">DISTRICT 9</div>
+  <div class="subtitle">Biblia visual interactiva – colorimetría, textura y sistema estético</div>
+
+  <div class="grid">
+
+    <!-- PALETA -->
+    <div class="card" onclick="openModal('paleta')">
+      <h2>PALETA DE COLOR</h2>
+      <p>Tonos tierra, verde militar y gris industrial que construyen un mundo degradado.</p>
+      <div class="palette">
+        <div class="color" style="background:#1F1F1F"></div>
+        <div class="color" style="background:#5A4A3F"></div>
+        <div class="color" style="background:#4F5D3A"></div>
+        <div class="color" style="background:#3A3A3A"></div>
+        <div class="color" style="background:#D4C27C"></div>
+      </div>
+    </div>
+
+    <!-- TEXTURAS -->
+    <div class="card" onclick="openModal('texturas')">
+      <h2>TEXTURAS</h2>
+      <p>Superficies sucias, metal oxidado y concreto deteriorado.</p>
+      <div class="texture" style="background-image:url('https://images.unsplash.com/photo-1549887534-1541e9326642')"></div>
+    </div>
+
+    <!-- SISTEMA -->
+    <div class="card" onclick="openModal('sistema')">
+      <h2>EL SISTEMA</h2>
+      <p>MNU como poder corporativo: control, explotación y vigilancia.</p>
+    </div>
+
+    <!-- CUERPO -->
+    <div class="card" onclick="openModal('cuerpo')">
+      <h2>EL CUERPO</h2>
+      <p>Transformación como pérdida de identidad y cambio de perspectiva.</p>
+    </div>
+
+    <!-- TERRITORIO -->
+    <div class="card" onclick="openModal('territorio')">
+      <h2>EL TERRITORIO</h2>
+      <p>Espacio de exclusión, gueto y segregación social.</p>
+    </div>
+
+    <!-- MIRADA -->
+    <div class="card" onclick="openModal('mirada')">
+      <h2>LA MIRADA</h2>
+      <p>Estética documental que construye una falsa sensación de realidad.</p>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="close" onclick="closeModal()">✕</div>
+  <div class="modal-content" id="modal-content"></div>
+</div>
+
+<script>
+
+function openModal(section){
+
+  const content = {
+    paleta: `
+      <h2>PALETA DE COLOR</h2>
+      <p>Predominan tonos apagados que refuerzan la idea de mundo deteriorado.</p>
+      <ul>
+        <li>Negro industrial → profundidad</li>
+        <li>Tierra óxido → precariedad</li>
+        <li>Verde militar → control</li>
+        <li>Amarillo contaminado → toxicidad</li>
+      </ul>
+    `,
+
+    texturas: `
+      <h2>TEXTURAS</h2>
+      <p>Las superficies reflejan abandono y desgaste social.</p>
+      <ul>
+        <li>Metal oxidado</li>
+        <li>Concreto agrietado</li>
+        <li>Pintura descascarada</li>
+      </ul>
+    `,
+
+    sistema: `
+      <h2>EL SISTEMA</h2>
+      <p>La corporación MNU actúa como poder dominante, utilizando tecnología alienígena para fines económicos y militares.</p>
+    `,
+
+    cuerpo: `
+      <h2>EL CUERPO</h2>
+      <p>La mutación de Wikus simboliza el paso de opresor a oprimido.</p>
+    `,
+
+    territorio: `
+      <h2>EL TERRITORIO</h2>
+      <p>El Distrito 9 representa la segregación estructural y la marginalidad.</p>
+    `,
+
+    mirada: `
+      <h2>LA MIRADA</h2>
+      <p>Uso de cámara en mano y lenguaje documental para generar realismo.</p>
+    `
+  };
+
+  document.getElementById("modal-content").innerHTML = content[section];
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal(){
+  document.getElementById("modal").style.display = "none";
+}
+
+</script>
+
+</body>
+</html>
